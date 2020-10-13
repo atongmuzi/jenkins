@@ -17,6 +17,10 @@ import org.testng.annotations.Test;
     public  void sample(){
         System.out.println("lalala");
     }
+    @Test
+    public void sample1(){
+        System.out.println("hehehe");
+    }
 
 
 }
