@@ -22,5 +22,10 @@ import org.testng.annotations.Test;
         System.out.println("hehehe");
     }
 
+    @Test
+    public void sample2(){
+        System.out.println("xixixi");
+    }
+
 
 }
