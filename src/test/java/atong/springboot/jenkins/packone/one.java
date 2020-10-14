@@ -33,5 +33,10 @@ import org.testng.annotations.Test;
         System.out.println("xixixi");
     }
 
+    @Test
+    public void oneSample3(){
+        System.out.println("zazaza");
+    }
+
 
 }
