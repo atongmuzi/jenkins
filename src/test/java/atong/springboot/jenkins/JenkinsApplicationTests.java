@@ -11,26 +11,26 @@ import org.testng.annotations.Test;
 @SpringBootTest
 public  class JenkinsApplicationTests extends AbstractTestNGSpringContextTests {
 
-    @Test
-    public void contextLoads() {
-        System.out.println("hahaha");
-    }
-
-    @Test
-    public void sample() {
-        System.out.println("lalala");
-    }
-
-    @Test
-    public void sample1() {
-        System.out.println("hehehe");
-    }
-
-    @Test
-    @Feature("atong test")
-    @Story("story1")
-    @Description("该案例是为了测试通过枚举类型引入数据")
-    public void sample2() {
-        System.out.println("xixixi");
-    }
+//    @Test
+//    public void contextLoads() {
+//        System.out.println("hahaha");
+//    }
+//
+//    @Test
+//    public void sample() {
+//        System.out.println("lalala");
+//    }
+//
+//    @Test
+//    public void sample1() {
+//        System.out.println("hehehe");
+//    }
+//
+//    @Test
+//    @Feature("atong test")
+//    @Story("story1")
+//    @Description("该案例是为了测试通过枚举类型引入数据")
+//    public void sample2() {
+//        System.out.println("xixixi");
+//    }
 }
