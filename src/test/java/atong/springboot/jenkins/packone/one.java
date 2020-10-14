@@ -10,7 +10,7 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
 
 @SpringBootTest
- public  class JenkinsApplicationTests extends AbstractTestNGSpringContextTests {
+ public  class one extends AbstractTestNGSpringContextTests {
 
     @Test
     public void contextLoads() {
