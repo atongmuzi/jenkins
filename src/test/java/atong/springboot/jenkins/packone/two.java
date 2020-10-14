@@ -14,15 +14,15 @@ import org.testng.annotations.Test;
 
     @Test
     public void oneContextLoads() {
-        System.out.println("hahaha");
+        System.out.println("hahaha2");
     }
     @Test
     public  void twoSample(){
-        System.out.println("lalala");
+        System.out.println("lalala2");
     }
     @Test
     public void twoSample1(){
-        System.out.println("hehehe");
+        System.out.println("hehehe2");
     }
 
     @Test
@@ -30,7 +30,7 @@ import org.testng.annotations.Test;
     @Story("story1")
     @Description("该案例是为了测试通过枚举类型引入数据")
     public void twoSample2(){
-        System.out.println("xixixi");
+        System.out.println("xixixi2");
     }
 
 
