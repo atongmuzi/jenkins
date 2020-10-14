@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 
 @SpringBootTest
-public  class JenkinsApplicationTests extends AbstractTestNGSpringContextTests {
+public  class JenkinsApplication extends AbstractTestNGSpringContextTests {
 
 //    @Test
 //    public void contextLoads() {
