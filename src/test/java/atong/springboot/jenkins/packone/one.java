@@ -31,7 +31,6 @@ import org.testng.annotations.Test;
     @Description("该案例是为了测试通过枚举类型引入数据")
     public void sample2(){
         System.out.println("xixixi");
-        System.out.println("lalal");
     }
 
 
