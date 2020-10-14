@@ -17,6 +17,7 @@
     <properties>
         <java.version>1.8</java.version>
         <aspectj.version>1.8.10</aspectj.version>
+         <xmlFileName>test.xml</xmlFileName>
     </properties>
 
 
@@ -70,7 +71,8 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+<!--                        <suiteXmlFile>testng.xml</suiteXmlFile>-->
+                        <suiteXmlFile>${xmlFileName}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
                 <dependencies>
