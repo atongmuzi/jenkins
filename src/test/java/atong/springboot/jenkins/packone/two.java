@@ -32,6 +32,10 @@ import org.testng.annotations.Test;
     public void twoSample2(){
         System.out.println("xixixi2");
     }
+    @Test
+    public void twoSample3(){
+        System.out.println("xixixi2");
+    }
 
 
 }
