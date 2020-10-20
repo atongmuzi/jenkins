@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/atongflyway?characterEncoding=UTF-8
+    url: jdbc:mysql://47.105.70.96:3307/atongflyway?characterEncoding=UTF-8
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: "123456"
