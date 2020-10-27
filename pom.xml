@@ -20,7 +20,6 @@
          <xmlFileName>testng.xml</xmlFileName>
     </properties>
 
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -71,6 +70,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cex.test</groupId>
+            <artifactId>test-framework</artifactId>
+            <version>1.8.1</version>
         </dependency>
     </dependencies>
 
