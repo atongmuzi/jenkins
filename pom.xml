@@ -10,7 +10,7 @@
     </parent>
     <groupId>atong.springboot</groupId>
     <artifactId>jenkins</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>jenkins</name>
     <description>jenkins project for Spring Boot</description>
 
@@ -107,5 +107,13 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>atongPackages</name>
+                <url>https://maven.pkg.github.com/LiuTongTeam/jenkins</url>
+        </repository>
+    </distributionManagement>
 
 </project>
