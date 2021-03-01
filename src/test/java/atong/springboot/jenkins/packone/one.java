@@ -38,5 +38,10 @@ import org.testng.annotations.Test;
         System.out.println("zazaza1");
     }
 
+    @Test
+    public void oneSample4(){
+        System.out.println("zazaza1");
+    }
+
 
 }
