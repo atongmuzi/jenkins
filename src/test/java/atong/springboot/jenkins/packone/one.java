@@ -5,9 +5,11 @@ package atong.springboot.jenkins.packone;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
+import org.junit.Assert;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
+import org.testng.Assert.*;
 
 @SpringBootTest
  public  class one extends AbstractTestNGSpringContextTests {
@@ -40,7 +42,7 @@ import org.testng.annotations.Test;
 
     @Test
     public void oneSample4(){
-        System.out.println("zazaza1");
+        Assert.fail("It is failluer");
     }
 
 
