@@ -46,7 +46,7 @@ import org.slf4j.Logger;
     @Test
     public void oneSample4(){
        int i = 8;
-       if (i==7){
+       if (i==8){
            log.info("success");
        }else {
            Assert.fail("hahaha fail");
