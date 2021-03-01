@@ -5,9 +5,9 @@ package atong.springboot.jenkins.packone;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
-import org.junit.Assert;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.Assert.*;
 
@@ -42,7 +42,8 @@ import org.testng.Assert.*;
 
     @Test
     public void oneSample4(){
-        Assert.fail("It is failluer");
+       int i = 8;
+        Assert.assertEquals(i,10);
     }
 
 
