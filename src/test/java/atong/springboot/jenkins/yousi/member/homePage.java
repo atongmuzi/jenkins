@@ -48,6 +48,7 @@ public class homePage  extends BaseCase {
         JSONObject resjson = BaseCase.resultDeal(response);
         System.out.println(resjson);
         System.out.println("hahaha");
+        System.out.println("hhah");
 
     }
 
