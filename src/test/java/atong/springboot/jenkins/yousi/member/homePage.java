@@ -7,13 +7,11 @@ import okhttp3.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
-import atong.springboot.jenkins.yousi.member.ConfigData.*;
-
 import java.io.IOException;
+import java.util.HashMap;
 
-import static atong.springboot.jenkins.yousi.member.ConfigData.vipHomePage;
+import static atong.springboot.jenkins.yousi.member.ConfigData.*;
 
 
 @SpringBootTest
@@ -24,16 +22,31 @@ public class homePage  extends BaseCase {
     @Test
     public void SelectVipGift() throws IOException {
 
-        Response response = OkHttpClientManager.get(ip_gateway+vipHomePage,null);
+        Response response = OkHttpClientManager.get(ip_gateway+vipHomePageUrl,null);
         JSONObject repjson =  BaseCase.resultDeal(response);
-        Allure.addAttachment("ip地址",ip_gateway+vipHomePage);
+        Allure.addAttachment("ip地址",ip_gateway+vipHomePageUrl);
         Allure.addAttachment("出参msg",repjson.get("msg").toString());
         Allure.addAttachment("code码：",repjson.get("code").toString());
         System.out.println(repjson.get("msg").toString());
         System.out.println(repjson.get("code").toString());
         System.out.println("-----------------");
+    }
 
+    @Test
+    public void rechargeOrStoreMember() throws IOException{
+        HashMap header = new HashMap<String,String>();
+        header.put("Content-Type","application/json");
+        header.put("X-Shop-Token","238a51570cb947a084c97edd9696714e");
 
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("addressId","3868");
+        jsonObject.put("payType","3");
+        jsonObject.put("source","0");
+        jsonObject.put("vipGiftId","1");
+        jsonObject.put("vipType","1");
+        Response response = OkHttpClientManager.post(ip_gateway+memOrderUrl,jsonObject.toString(),ContentType,header);
+        JSONObject resjson = BaseCase.resultDeal(response);
+        System.out.println(resjson);
 
     }
 
