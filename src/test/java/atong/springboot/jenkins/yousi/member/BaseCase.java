@@ -1,15 +1,16 @@
-package atong.springboot.jenkins.packone;
+package atong.springboot.jenkins.yousi.member;
 
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.Response;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 
 import java.util.HashMap;
 import java.util.Random;
 
-import static atong.springboot.jenkins.packone.ConfigData.*;
+import static atong.springboot.jenkins.yousi.member.ConfigData.*;
 
 /**
  * @author tongcy
@@ -17,9 +18,9 @@ import static atong.springboot.jenkins.packone.ConfigData.*;
  * @desc 基础信息设置
  **/
 @Slf4j
-public class BaseCase {
+public class BaseCase extends AbstractTestNGSpringContextTests {
     //测试环境信息
-    public static String ip_gateway = "https://luxury-business-manage-dev.ssluxury.cn";
+    public static String ip_gateway = "https://ou-pre.saifurong.com";
 
     /**
      * @desc 数据初始化

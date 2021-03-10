@@ -1,14 +1,15 @@
 package atong.springboot.jenkins.packone;
 
+import atong.springboot.jenkins.yousi.member.BaseCase;
 import com.alibaba.fastjson.JSONObject;
 import io.cex.test.framework.assertutil.AssertTool;
 import io.cex.test.framework.httputil.OkHttpClientManager;
 import okhttp3.Response;
 import org.testng.annotations.Test;
 
-import static atong.springboot.jenkins.packone.ConfigData.modifyUrl;
+import static atong.springboot.jenkins.yousi.member.ConfigData.*;
 
-public class ModifyService extends BaseCase  {
+public class ModifyService extends BaseCase {
 
     @Test
     public void NormalService() throws Exception{
@@ -27,7 +28,7 @@ public class ModifyService extends BaseCase  {
         jsonbody.put("receiver","童春艳");
         jsonbody.put("remark","我是备注");
         jsonbody.put("sendNo","WX190001");
-        String url = ip_gateway + modifyUrl;
+        String url = ip_gateway + vipHomePage;
         Response response = OkHttpClientManager.post(url, jsonbody.toJSONString(),
                 "application/json", dataInit());
         JSONObject rspjson = resultDeal(response);
