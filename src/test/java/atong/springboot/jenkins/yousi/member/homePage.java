@@ -47,6 +47,7 @@ public class homePage  extends BaseCase {
         Response response = OkHttpClientManager.post(ip_gateway+memOrderUrl,jsonObject.toString(),ContentType,header);
         JSONObject resjson = BaseCase.resultDeal(response);
         System.out.println(resjson);
+        System.out.println("hahaha");
 
     }
 
