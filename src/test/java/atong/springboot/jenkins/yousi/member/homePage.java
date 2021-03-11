@@ -49,6 +49,7 @@ public class homePage  extends BaseCase {
         System.out.println(resjson);
         System.out.println("hahaha");
         System.out.println("hhah");
+        System.out.println("lalal");
 
     }
 
