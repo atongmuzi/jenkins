@@ -50,6 +50,7 @@ public class homePage  extends BaseCase {
         System.out.println("hahaha");
         System.out.println("hhah");
         System.out.println("lalal");
+        System.out.println("lelelel");
 
     }
 
