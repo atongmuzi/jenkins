@@ -20,7 +20,7 @@ import static atong.springboot.jenkins.yousi.member.ConfigData.*;
 @Slf4j
 public class BaseCase extends AbstractTestNGSpringContextTests {
     //测试环境信息
-    public static String ip_gateway = "http://ou-pre.saifurong.com";
+    public static String ip_gateway = "https://ou-pre.saifurong.com";
 
     /**
      * @desc 数据初始化
