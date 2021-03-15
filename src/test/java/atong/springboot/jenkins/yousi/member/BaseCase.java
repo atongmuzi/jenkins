@@ -21,6 +21,10 @@ import static atong.springboot.jenkins.yousi.member.ConfigData.*;
 public class BaseCase extends AbstractTestNGSpringContextTests {
     //测试环境信息
     public static String ip_gateway = "https://ou-pre.saifurong.com";
+    //测试环境数据库地址
+    public static String db_address= "jdbc:mysql://rm-bp161k706c2f2ar0u2o.mysql.rds.aliyuncs.com:3306/tsc_mall_pre?useUnicode=true&characterEncoding=UTF8&user=youth_pre_read&password=Ne8sAuDkBQ";
+
+
 
     /**
      * @desc 数据初始化
