@@ -52,8 +52,7 @@ public class homePage  extends BaseCase {
 //        System.out.println("hhah");
 //        System.out.println("lalal");
 //        System.out.println("lelelel");
-        AssertTool.isContainsExpect("0",resjson.get("code").toString());
-
+        AssertTool.isContainsExpect("1",resjson.get("code").toString());
     }
     @Test
     public void test(){
