@@ -1,6 +1,7 @@
 package atong.springboot.jenkins.yousi.member;
 
 import com.alibaba.fastjson.JSONObject;
+import io.cex.test.framework.assertutil.AssertTool;
 import io.cex.test.framework.httputil.OkHttpClientManager;
 import io.qameta.allure.Allure;
 import okhttp3.Response;
@@ -46,11 +47,12 @@ public class homePage  extends BaseCase {
         jsonObject.put("vipType","1");
         Response response = OkHttpClientManager.post(ip_gateway+memOrderUrl,jsonObject.toString(),ContentType,header);
         JSONObject resjson = BaseCase.resultDeal(response);
-        System.out.println(resjson);
-        System.out.println("hahaha");
-        System.out.println("hhah");
-        System.out.println("lalal");
-        System.out.println("lelelel");
+//        System.out.println(resjson);
+//        System.out.println("hahaha");
+//        System.out.println("hhah");
+//        System.out.println("lalal");
+//        System.out.println("lelelel");
+        AssertTool.isContainsExpect("0",resjson.get("code").toString());
 
     }
     @Test
