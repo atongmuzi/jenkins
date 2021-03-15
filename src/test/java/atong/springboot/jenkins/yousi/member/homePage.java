@@ -53,5 +53,9 @@ public class homePage  extends BaseCase {
         System.out.println("lelelel");
 
     }
+    @Test
+    public void test(){
+        System.out.println("hahaha");
+    }
 
 }
