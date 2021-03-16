@@ -36,6 +36,7 @@ public class homePage  extends BaseCase {
         System.out.println(repjson.get("msg").toString());
         System.out.println(repjson.get("code").toString());
         System.out.println("-----------------");
+
     }
 
     @Test
@@ -53,17 +54,9 @@ public class homePage  extends BaseCase {
         jsonObject.put("vipType","1");
         Response response = OkHttpClientManager.post(ip_gateway+memOrderUrl,jsonObject.toString(),ContentType,header);
         JSONObject resjson = BaseCase.resultDeal(response);
-//        System.out.println(resjson);
-//        System.out.println("hahaha");
-//        System.out.println("hhah");
-//        System.out.println("lalal");
-//        System.out.println("lelelel");
         JSONArray jsonArray = new DataBaseManager().executeQuery(sql,connection);
-       // System.out.println(jsonArray.get(0));
-
         JSONObject jsonObject1 = (JSONObject) jsonArray.get(0);
         String order_status = jsonObject1.get("order_status").toString();
-
         AssertTool.isContainsExpect("0",resjson.get("code").toString());
         AssertTool.isContainsExpect("101",order_status);
 
