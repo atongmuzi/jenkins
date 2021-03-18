@@ -12,8 +12,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.testng.annotations.Test;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.sql.*;
+import com.alibaba.fastjson.*;
 
 import static atong.springboot.jenkins.yousi.member.ConfigData.*;
 
@@ -24,9 +27,11 @@ public class homePage  extends BaseCase {
 
     private static final Logger log = LoggerFactory.getLogger(homePage.class);
     public Connection connection = new  DataBaseManager().getMysqlConnection(db_address);
+    ArrayList arrayList = new ArrayList<String>();
+
 
     @Test
-    public void SelectVipGift() throws IOException {
+    public void  SelectVipGift() throws IOException {
 
         Response response = OkHttpClientManager.get(ip_gateway+vipHomePageUrl,null);
         JSONObject repjson =  BaseCase.resultDeal(response);
