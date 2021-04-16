@@ -2,7 +2,7 @@ package atong.springboot.jenkins;
 
 
 import java.util.*;
-
+import java.util.function.*;
 
 public class array {
 
