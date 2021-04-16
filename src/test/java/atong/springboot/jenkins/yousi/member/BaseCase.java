@@ -46,6 +46,7 @@ public class BaseCase extends AbstractTestNGSpringContextTests {
         String res = null;
         try {
             res = response.body().string();
+            log.info("response is not null");
         }catch (Exception e){
             e.printStackTrace();
             log.error("get response string error");
