@@ -13,6 +13,10 @@ import org.testng.annotations.Test;
 import org.testng.Assert.*;
 import org.slf4j.Logger;
 
+import java.sql.Array;
+import java.sql.Connection;
+import java.util.*;
+
 @SpringBootTest
  public  class one extends AbstractTestNGSpringContextTests {
     private static final Logger log = LoggerFactory.getLogger(one.class);
@@ -53,6 +57,30 @@ import org.slf4j.Logger;
        }
 
     }
+    @Test
+    public void oneSample5(){
+        String a = "123";
+        String b = "123";
+        System.out.println(a==b);
+        System.out.println(Math.round(-1.5));
+    }
+    @Test
+    public void oneSample6(){
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("acbedgf");
+        System.out.println(stringBuilder.reverse());
+        StringBuffer stringBuffer = new StringBuffer().append("adcbgfe");
+        System.out.println(stringBuffer.reverse());
+        String s = new String("abdjlahag");
+        System.out.println(s.indexOf("a",1));
+        System.out.println(s.charAt(4));
+    }
+    @Test
+    public void oneSample7(){
+        Collection<Integer> collection = new ArrayList<>(Arrays.asList(1,2,3));
+        Collection<Integer> collection1= new ArrayList<>();
+        Collections.addAll(collection1,1,2,3,4);
 
+    }
 
 }
