@@ -6,8 +6,11 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import io.cex.test.framework.httputil.OkHttpClientManager;
 import io.cex.test.framework.jsonutil.JsonFileUtil;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import okhttp3.Response;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
@@ -21,8 +24,10 @@ import static atong.springboot.jenkins.Pookie.tool.PookieConfig.pick_pookie;
 import static atong.springboot.jenkins.Pookie.tool.PookieConfig.pre_trade;
 
 @SpringBootTest
+@Feature(value = "orders")
 public class PickPookie extends BaseCasePookie {
     @Test
+    @Story(value = "pick pookie")
     public void pick() throws IOException {
         HashMap header = dataInit();
         Response response = OkHttpClientManager.get(ip_gateway+pick_pookie,header);
@@ -39,6 +44,7 @@ public class PickPookie extends BaseCasePookie {
         return arrymap;
     }
     @Test(dataProvider = "providePreTradeRightData",description = "正常测试案例")
+    @Story(value = "preTrade")
     public void preTrade(Map<?,?> param)throws Exception
     {
         HashMap header = dataInit();
@@ -49,6 +55,10 @@ public class PickPookie extends BaseCasePookie {
         System.out.println(rspjson.get("msg"));
         JSONObject jsonObject1 = (JSONObject)rspjson.get("data");
         System.out.println(jsonObject1.get("order_no"));
+    }
+    @Test
+    @Story(value = "preTrade-coupon")
+    public void preTradeCoupon(){
 
     }
 }
