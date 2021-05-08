@@ -8,7 +8,9 @@ import io.cex.test.framework.httputil.OkHttpClientManager;
 import io.cex.test.framework.jsonutil.JsonFileUtil;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
+import io.qameta.allure.Allure;
 import okhttp3.Response;
+import org.apache.xmlbeans.impl.xb.xsdschema.All;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -32,6 +34,8 @@ public class PickPookie extends BaseCasePookie {
         HashMap header = dataInit();
         Response response = OkHttpClientManager.get(ip_gateway+pick_pookie,header);
         JSONObject jsonObject = resultDeal(response);
+        Allure.addAttachment("入参 ip:",ip_gateway+pick_pookie);
+        Allure.addAttachment("出参 response:",jsonObject.toString());
         System.out.println(jsonObject.get("code"));
         System.out.println(jsonObject.get("msg"));
 
