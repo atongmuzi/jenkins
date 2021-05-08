@@ -1,0 +1,15 @@
+{
+  "body": {
+    "act_id_list": [],
+    "amount": 0.5,
+    "app_allow_guess": true,
+    "item_id": 361,
+    "order_type": 1,
+    "sku_no": "20210508419910020015273-1",
+    "sku_type": 1,
+    "use_pcoin": true
+  },
+  "msg": "success",
+  "code": 0
+
+}
